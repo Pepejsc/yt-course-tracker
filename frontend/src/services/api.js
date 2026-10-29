@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8000/api';
+const API_URL = import.meta.env.VITE_API_URL || "https://yt-course-tracker-backend.onrender.com/api";
 
 export const getVideos = async () => {
   const res = await fetch(`${API_URL}/videos`);
